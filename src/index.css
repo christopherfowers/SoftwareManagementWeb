@@ -1,3 +1,11 @@
+html, body {
+  height: 100vh;
+  width: 100vw;
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +13,82 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #121212;
+  color: #fff;  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: hidden;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.dashboard .card {
+  margin: 7px;
+  height: 485px;
+  max-height: 485px;
+  width: 432px;
+}
+
+.dashboard .card .card-body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.dashboard .card .card-body ul {
+  list-style-type: disc;
+  padding-left: 0;
+}
+
+.dashboard .card .card-body ul,
+.dashboard .card .card-body ul li  {
+  width: 100%;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.layout{
+  max-height: 100vh;
+  height: 100vw;
+  max-width: 100vw;
+  width: 100vw;
+  padding: 0;
+}
+
+.layout .content {
+  padding: 0;
+  display: flex;
+  max-height: 100vh;
+  height: 100vw;
+  max-width: 100vw;
+  width: 100vw;
+}
+
+.sidebar {
+  background-color: #333;
+  height: 100vh;
+}
+
+.sidenav-item a {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+  }
+  .main-content {
+    margin-left: 0;
+  }
 }
