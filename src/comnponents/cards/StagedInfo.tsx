@@ -23,16 +23,16 @@ const StagedInfo = () => {
         <Row>
           <Col>
             <div>
-              <h6>Dependencies:</h6>
-              <ul>
+              <h5 style={{fontSize: 18}}>Dependencies:</h5>
+              <ul style={{fontSize: 14}}>
                 {stagedInfo?.dependencies.map((d) => <li key={d}>{d}</li>)}
               </ul>          
             </div>
           </Col>
           <Col>
             <div>
-              <h6>Missing Dependencies:</h6>
-              <ul>
+              <h5 style={{fontSize: 18}}>Missing Deps:</h5>
+              <ul style={{fontSize: 14}}>
                 {
                   stagedInfo?.ticketsWithoutDependencies.map((d) => (
                     <a href={`https://complyright.atlassian.net/browse/${d.substring(0, d.indexOf(' '))}`} target="_blank" rel="noreferrer noopener">

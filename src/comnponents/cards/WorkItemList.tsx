@@ -10,7 +10,7 @@ const WorkItemList: React.FC<{title: string, workItems: IIssue[]}> = ({title, wo
       <CardHeader>
         <CardTitle className="d-flex justify-content-between align-items-center">
           <div>
-            {title} - {workItems.length}
+            {title}
           </div>
           <div>
             {workItems?.length || 0} <FontAwesomeIcon icon={faTicket} />
